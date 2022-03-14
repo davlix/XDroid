@@ -17,6 +17,11 @@ Dependencies :
 5. Apktool
 6. Zipalign
 
+Support for :
+
+1.Kali Linux
+2.ParrotOS
+
 Download/Config/Usage:
 
 1. - Download the tool from github

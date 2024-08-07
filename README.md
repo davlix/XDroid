@@ -25,7 +25,7 @@ Support for :
 Download/Config/Usage:
 
 1. - Download the tool from github
-   -  git clone https://github.com/BabyGPunk/XDROID.git
+   -  git clone https://github.com/Davlix/XDROID.git
 2. - Set script execution permission
    -  cd xdroid
    - chmod +x xdroid
